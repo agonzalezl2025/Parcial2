@@ -1,8 +1,10 @@
 # Parcial2
 # Diccionario
-- **year:** Año en que se realizaron las observaciones
-- **country_name:** 23 columnas incluyendo precios (Open, Close), volumen, ratios financieros (ROE, ROA), y métricas temporales (año, trimestre).
-- **country_code:** 321 empresas del S&P 500.
-- **value:** 
-- **region**
-- **income_group**
+| **Variable**      | **Tipo**             | **Descripción**                                                                                 |
+|-------------------|----------------------|-------------------------------------------------------------------------------------------------|
+| `country_name`    | String              | Nombre oficial del país.                                                                        |
+| `country_code`    | String              | Código (generalmente ISO) que identifica al país (ej: “AFG”, “ALB”).                             |
+| `year`            | Entero              | Año calendario correspondiente al valor del PIB.                                                |
+| `value`           | Numérico (float)    | Valor del PIB. Verificar la unidad (millones, miles de millones, etc.).                         |
+| `region`          | String              | Región geográfica del país (ej: “Latin America & Caribbean”, “East Asia & Pacific”).             |
+| `income_group`    | String              | Clasificación del país según nivel de ingreso (ej: “Low income”, “High income”).                |
