@@ -1,35 +1,9 @@
 # Parcial2
 
-# Análisis del PIB Global con Python
+# Proyecto de Redes Neuronales
 
-# 📌 Descripción del Proyecto
-
-En un mundo cada vez más interconectado, comprender el panorama económico global es esencial para formuladores de políticas, investigadores y empresas. Este proyecto permite aplicar los conceptos aprendidos en los laboratorios de Python mediante el análisis del World GDP Dataset, extraído del World Bank Group.
-
-El dataset incluye información sobre el Producto Interno Bruto (PIB) de múltiples países desde 1960 hasta 2022, proporcionando una base sólida para examinar tendencias económicas, comparar desempeños nacionales y explorar correlaciones con otros indicadores económicos y sociales.
-
-# 🎯 Objetivos
-
-📊 Aplicar herramientas de análisis de datos en Python para estudiar la evolución del PIB global.
-
-🔍 Explorar patrones económicos y tendencias a lo largo del tiempo.
-
-🌍 Identificar diferencias en el crecimiento económico entre países y regiones.
-
-📈 Visualizar datos de manera efectiva para comunicar hallazgos clave.
-
-# 📂 Contenido del Proyecto
-
-Exploración de Datos: Carga y limpieza del dataset para eliminar valores nulos o inconsistentes.
-
-Análisis Descriptivo: Cálculo de estadísticas básicas sobre el crecimiento del PIB en diferentes países.
-
-Visualización de Datos: Uso de librerías como Matplotlib y Seaborn para representar tendencias económicas.
-
-Comparación Regional: Evaluación del crecimiento del PIB en distintas regiones geográficas.
-
-Predicción de Tendencias: Aplicación de modelos de regresión para prever la evolución futura del PIB.
-
+## Descripción
+Este proyecto se centra en la construcción y optimización de modelos de redes neuronales para la clasificación de datos. Se trabajó con una base de datos de los países y su **GDP** desde **1960 hasta 2022**, implementando técnicas de limpieza, transformación y modelado avanzado.
 
 # Diccionario
 | **Variable**      | **Tipo**             | **Descripción**                                                                                 |
@@ -40,6 +14,65 @@ Predicción de Tendencias: Aplicación de modelos de regresión para prever la e
 | `value`           | Numérico (float)    | Valor del PIB. Verificar la unidad (millones, miles de millones, etc.).                         |
 | `region`          | String              | Región geográfica del país (ej: “Latin America & Caribbean”, “East Asia & Pacific”).             |
 | `income_group`    | String              | Clasificación del país según nivel de ingreso (ej: “Low income”, “High income”).                |
+
+## Integrantes del Equipo
+- **David**: Responsable de la base de datos.
+- **Lucas y Louis**: Desarrollo de redes neuronales.
+- **Juan Fernando y Alejandro**: Redacción del README, relatoría y desarrollo de los bonos.
+
+## Estructura del Proyecto
+1. **Carga y Preparación de Datos**
+   - Integración de múltiples bases de datos.
+   - Limpieza y preprocesamiento de los datos.
+   - Creación de diccionario de datos unificado.
+
+2. **Desarrollo de Modelos**
+   - Uso de `MLPClassifier` de scikit-learn.
+   - Ajuste de hiperparámetros con `GridSearchCV`.
+   - Implementación de técnicas de regularización y normalización.
+
+3. **Optimización del Modelo**
+   - Ajustes en la arquitectura de la red neuronal.
+   - Implementación de técnicas avanzadas:
+     - **Early Stopping**
+     - **Batch Normalization**
+     - **Dropout**
+     - **Regularización L2**
+   - Métricas utilizadas:
+     - **f1_macro** en lugar de accuracy para una mejor evaluación.
+
+4. **Desarrollo del Bono**
+   - Integración de una nueva base de datos con datos de PIB per cápita de los países entre 1960 y 2022.
+   - Conversión de variables numéricas a categóricas para la clasificación.
+   - Evaluación de los modelos con diferentes configuraciones.
+
+## Problemas y Soluciones
+### Problemas Técnicos
+- **Dificultades en la limpieza de datos**
+  - Solución: Corrección manual y automatización de transformaciones.
+
+- **Sobreajuste del modelo**
+  - Soluciones implementadas:
+    - Reducción del **learning rate**.
+    - Incremento del **dropout**.
+    - Uso de **Regularización L2** y **EarlyStopping**.
+
+- **Errores en la función de pérdida**
+  - Se corrigió el uso de `MSE` a `categorical_crossentropy`, mejorando la precisión.
+
+### Mejoras Implementadas
+| Versión | Ajustes | Precisión Final |
+|---------|---------|----------------|
+| 1ra versión | Modelo inicial sin ajustes | 25% |
+| 2da versión | BatchNormalization, reducción de learning rate, aumento de dropout | 72.84% |
+| Versión final | StandardScaler, ajuste de pesos, reducción de dropout, ReduceLROnPlateau | 70% |
+
+## Reuniones y Colaboración
+- **Reunión de avance**: Corrección de errores y optimización de modelos.
+- **Grabaciones de reuniones**: Compartidas en el grupo de WhatsApp.
+
+## Conclusión
+Este proyecto permitió mejorar significativamente la precisión de la red neuronal de un 47% a un **79%**, aplicando estrategias avanzadas de optimización. Se enfrentaron diversos desafíos técnicos, resolviendo problemas de sobreajuste y mala configuración del modelo. El trabajo colaborativo y el análisis iterativo fueron clave para alcanzar los resultados finales.
 
 
 ## :star2: Bono: Nueva Variable de PIB per Cápita
