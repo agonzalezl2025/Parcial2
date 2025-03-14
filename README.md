@@ -1,14 +1,14 @@
 # Parcial2
 
-#Análisis del PIB Global con Python
+# Análisis del PIB Global con Python
 
-📌 Descripción del Proyecto
+# 📌 Descripción del Proyecto
 
 En un mundo cada vez más interconectado, comprender el panorama económico global es esencial para formuladores de políticas, investigadores y empresas. Este proyecto permite aplicar los conceptos aprendidos en los laboratorios de Python mediante el análisis del World GDP Dataset, extraído del World Bank Group.
 
 El dataset incluye información sobre el Producto Interno Bruto (PIB) de múltiples países desde 1960 hasta 2022, proporcionando una base sólida para examinar tendencias económicas, comparar desempeños nacionales y explorar correlaciones con otros indicadores económicos y sociales.
 
-#🎯 Objetivos
+# 🎯 Objetivos
 
 📊 Aplicar herramientas de análisis de datos en Python para estudiar la evolución del PIB global.
 
