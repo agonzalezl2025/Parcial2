@@ -118,6 +118,20 @@ La conversión de las variables X y Y de cadenas de texto a números.
 
 Pero lo peor aún estaba por venir…
 
+Analsis de datos 1D 
+
+El predispuesto de gdp income que podía dañar las predicciones
+
+Las separaciones en 30% para equilibrar los datos entre los High y médium 
+
+Consejo: aplique OneHotEncoder a y_train_class y y_test_class luego de crear la variable
+categórica. El resultado final debería verse así: no nos hizo falta p
+ rque ya lo separamos por cada año
+
+Nos dimos cuenta que era mejor normalizar 
+
+Para el 3a debe de ser de una sola dimensión el Y pero para el 3b debe de ser de varias
+
 # 🤯 El Gran Error
 
 Justo cuando creían que todo iba bien, descubrieron un error en la limpieza de datos. ¡El hechizo no había funcionado como esperaban! Tuvieron que corregirlo antes de poder construir la Gran Red de Neuronas. Además, el bono mágico era más difícil de lo que imaginaban. Pensaron que incluía todo el Anexo Mágico, pero tras consultarlo con el sabio Camilo, descubrieron que solo debían agregar otra base de datos.
